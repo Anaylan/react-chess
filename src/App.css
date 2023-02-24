@@ -1,0 +1,66 @@
+.app {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+body {
+	background: linear-gradient(-45deg, #722ed1, #597ef7, #ff85c0);
+	background-size: 400% 400%;
+	animation: background 10s ease infinite;
+}
+
+@keyframes background {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.board {
+	width: calc(64px * 8);
+	height: calc(64px * 8);
+	display: flex;
+	flex-wrap: wrap;
+}
+.cell {
+	width: 64px;
+	height: 64px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.cell img {
+	width: 48px;
+	height: 48px;
+	position: relative;
+}
+.black {
+	background-color: #4096ff;
+}
+.white {
+	background-color: #faad14;
+}
+
+.selected {
+	background-color: #fa541c;
+}
+.available {
+	height: 12px;
+	width: 12px;
+	border-radius: 50%;
+	background-color: #22c022;
+}
+
+.lost {
+	height: calc(50vh - 60px);
+	padding: 30px;
+	background-color: lightgray;
+}
